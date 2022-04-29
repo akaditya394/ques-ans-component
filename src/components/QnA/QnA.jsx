@@ -10,7 +10,8 @@ function QnA() {
   async function fetchQnA() {
     try {
       const response = await fetch(
-        "https://recruitingmonk-v2.azurewebsites.net/qna"
+        "https://recruitingmonk-v2.azurewebsites.net/qna",
+        { mode: "cors" }
       );
       const data = await response.json();
       setQnas(data);
