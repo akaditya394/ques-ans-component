@@ -1,16 +1,16 @@
-import React, { useRef } from "react";
+import React from "react";
 import styles from "./Question.module.css";
 
 function Question(props) {
-  // var quesRef = useRef();
-
-  // quesRef.current.innerHTML = props.question
-
   return (
     <div className={styles.main}>
       <div className={styles.details}>
-        <div><b>{props.name}</b></div>
-        <div><i>{props.date}</i></div>
+        <div>
+          <b>{props.name}</b>
+        </div>
+        <div>
+          <i>{props.date}</i>
+        </div>
       </div>
       <div
         dangerouslySetInnerHTML={{ __html: `<b>Q.${props.question}</b>` }}

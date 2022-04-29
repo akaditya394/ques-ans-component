@@ -23,29 +23,27 @@ function QnA() {
 
   return (
     <div className={styles.main}>
-      <div className={styles.qna}>
-        {qnas.map((qna, index) => {
-          return (
-            <React.Fragment key={index}>
-              <Question
-                key={qna.author}
-                question={qna.question}
-                answers={qna.answers}
-                upvotes={qna.upvotes}
-                name={qna.name}
-                desc={qna.desc}
-                date={qna.date}
-              />
-              <Answer
-                id={qna.uid}
-                name={qna.name}
-                key={qna.uid}
-                answers={qna.answers}
-              />
-            </React.Fragment>
-          );
-        })}
-      </div>
+      {qnas.map((qna, index) => {
+        return (
+          <div className={styles.qna} key={index}>
+            <Question
+              key={qna.author}
+              question={qna.question}
+              answers={qna.answers}
+              upvotes={qna.upvotes}
+              name={qna.name}
+              desc={qna.desc}
+              date={qna.date}
+            />
+            <Answer
+              id={qna.uid}
+              name={qna.name}
+              key={qna.uid}
+              answers={qna.answers}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
