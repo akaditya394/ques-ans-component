@@ -11,7 +11,7 @@ function QnA() {
     try {
       const response = await fetch(
         "https://recruitingmonk-v2.azurewebsites.net/qna",
-        { crossDomain:true,mode: "cors" }
+        { crossDomain:true,mode: "no-cors" }
       );
       const data = await response.json();
       setQnas(data);
