@@ -2,6 +2,7 @@
   "name": "ques-ans",
   "version": "0.1.0",
   "private": true,
+  "proxy":"https://tangerine-duckanoo-b9c616.netlify.app/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
