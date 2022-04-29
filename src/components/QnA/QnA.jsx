@@ -13,7 +13,6 @@ function QnA() {
         "https://recruitingmonk-v2.azurewebsites.net/qna"
       );
       const data = await response.json();
-      console.log(data);
       setQnas(data);
     } catch (error) {}
   }
@@ -24,21 +23,29 @@ function QnA() {
 
   return (
     <div className={styles.main}>
-      {qnas.map((qna) => {
-        return (
-          <div className={styles.qna}>
-            <Question
-              question={qna.question}
-              answers={qna.answers}
-              upvotes={qna.upvotes}
-              name={qna.name}
-              desc={qna.desc}
-              date={qna.date}
-            />
-            <Answer answers={qna.answers} />
-          </div>
-        );
-      })}
+      <div className={styles.qna}>
+        {qnas.map((qna, index) => {
+          return (
+            <React.Fragment key={index}>
+              <Question
+                key={qna.author}
+                question={qna.question}
+                answers={qna.answers}
+                upvotes={qna.upvotes}
+                name={qna.name}
+                desc={qna.desc}
+                date={qna.date}
+              />
+              <Answer
+                id={qna.uid}
+                name={qna.name}
+                key={qna.uid}
+                answers={qna.answers}
+              />
+            </React.Fragment>
+          );
+        })}
+      </div>
     </div>
   );
 }

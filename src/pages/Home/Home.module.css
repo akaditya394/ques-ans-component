@@ -1,9 +1,11 @@
-.main{
-    height: auto;
-    width: auto;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+.main {
+  min-height: 100vh;
+  overflow-x: none;
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #00B4DB 0%, #0083B0 100%);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }

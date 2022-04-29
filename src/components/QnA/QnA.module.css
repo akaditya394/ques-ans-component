@@ -1,5 +1,5 @@
 .main {
-  font-family: "Montserrat", sans-serif;  
+  font-family: "Montserrat", sans-serif;
   gap: 2rem;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,7 @@
 }
 
 .qna {
+  background-color: white;
   width: 80%;
   display: flex;
   gap: 2rem;
@@ -15,6 +16,6 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  border-radius:1rem;
+  border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
